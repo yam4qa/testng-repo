@@ -2,7 +2,6 @@ package testNGPackA;
 
 import java.util.concurrent.TimeUnit;
 //import org.openqa.selenium.support.ui.Select;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ById;
 import org.openqa.selenium.TimeoutException;
@@ -19,7 +18,6 @@ import org.testng.annotations.Test;
 public class SelectDropDownTest 
 {
 	WebDriver driver;
-	
 	@BeforeMethod
 	public void startSetUp()
 	{
@@ -48,7 +46,7 @@ public class SelectDropDownTest
 // Instead of using selectors we can use 'select' class for dropdown But tagname should be'select' in DOM
 		
 		//select the third dropdown using "select by index"
-		//Select index = new Select(driver.findElement(By.id("month")));//OR
+		//Select index = new Select(driver.findElement(By.id("month")));// OR
 		Select index = new Select(driver.findElement(By.cssSelector("select#month")));
 		index.selectByIndex(9);
 		Thread.sleep(1000);
